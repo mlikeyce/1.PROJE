@@ -1,0 +1,30 @@
+# Merge Sort örneği:
+     [16,21,11,8,12,22]
+  1.Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+  2.Big-O Notation gösterimini yazınız.
+# Çözümü:
+  # 1.                    [16,21,11,8,12,22]                => ilk önce diziyi iki parçaya bölüyoruz.
+                 
+                    [16,21,11]  |  [8,12,22]              
+                                                          => Tek kalacak şekilde her seferinde bölmeye devam ediyoruz.
+                [16,21] | [11]  |  [8,12] | [22]
+                
+            [16] | [21] | [11]  |  [8] | [12] | [22]      =>Tek kaldıktan sonra birleştirme işlemine geçiyoruz.
+             
+   O(n)  =>    [16,21]  | [11]  |  [8,12]  | [22]         => her seferinde sıralı kutucuklar elde ediyoruz.Birleştirirken küçükten büyüğe sıralıyoruz.
+               
+   O(n)  =>         [11,16,21]  |  [8,12,22]
+                    
+                        [8,11,12,16,21,22]                
+     
+     # Diziyi parçaladıktan sonra birleştirme işleminde sıralı bir şekilde kutucukları doldurmak için bir sorgu yapmam yeterli oluyor.(sol ve sağındakinin en küçüğü ile 
+       karşılaştırma yapmam yeterli oluyor.)
+   
+   # 2. 
+      Eleman bazlı ilerlediğimiz için sayı dizisinde taradığım eleman sayısı aynı oluyor.
+      Her seferinde O(n) şeklinde ilerleyip işlemi yarıya indirdiğimiz için:
+                        2^x=n => logn=x
+                        logn kere işlemi tekrar ediyoruz
+                        her işlemde O(n) complexity geliyor.
+                        
+                 TİME COMPLEXITY= O(n) * O(logn) = O(nlogn) oluyor.
