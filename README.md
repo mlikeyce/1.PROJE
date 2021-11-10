@@ -1,1 +1,1 @@
-#  PATİKA-PROJECTS
+#  veri yapıları ve algoritmalar
